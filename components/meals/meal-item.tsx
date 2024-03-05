@@ -5,9 +5,11 @@ import classes from "./meal-item.module.css";
 export type MealItemProps = {
   title: string;
   slug: string;
-  image: StaticImageData;
+  image: string;
   summary: string;
+  instructions: string;
   creator: string;
+  creator_email: string;
 };
 
 export default function MealItem({
