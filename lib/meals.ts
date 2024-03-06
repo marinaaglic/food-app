@@ -4,5 +4,6 @@ import { MealItemProps } from "@/components/meals/meal-item";
 
 export async function getMeals(): Promise<MealItemProps[]> {
   await new Promise((resolve) => setTimeout(resolve, 2000));
+  //throw new Error("Loading meals failed.");
   return db.prepare("SELECT * FROM meals").all() as MealItemProps[];
 }
