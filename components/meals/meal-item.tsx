@@ -5,7 +5,7 @@ import classes from "./meal-item.module.css";
 export type MealItemProps = {
   title: string;
   slug: string;
-  image: string;
+  image: StaticImageData;
   summary: string;
   instructions: string;
   creator: string;
