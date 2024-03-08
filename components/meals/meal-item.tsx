@@ -6,6 +6,7 @@ export type MealItemProps = {
   title: string;
   slug: string;
   image: StaticImageData;
+  imagePath: string;
   summary: string;
   instructions: string;
   creator: string;
@@ -16,6 +17,7 @@ export default function MealItem({
   title,
   slug,
   image,
+  imagePath,
   summary,
   creator,
 }: MealItemProps) {
