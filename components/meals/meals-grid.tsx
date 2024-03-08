@@ -1,4 +1,5 @@
-import MealItem, { MealItemProps } from "./meal-item";
+import MealItem from "./meal-item";
+import { MealItemProps } from "@/app/type/meal-item";
 import classes from "./meals-grid.module.css";
 
 type MealsGridProps = {

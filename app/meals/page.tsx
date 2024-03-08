@@ -15,9 +15,7 @@ async function Meals() {
   return <MealsGrid meals={meals} />;
 }
 
-type Props = {};
-
-export default function MealsPage({}: Props) {
+export default function MealsPage() {
   return (
     <>
       <header className={classes.header}>

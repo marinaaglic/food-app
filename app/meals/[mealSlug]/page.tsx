@@ -23,13 +23,14 @@ export default function MealsDetailPage({ params }: MealsDetailProps) {
   if (!meal) {
     notFound();
   }
+
   meal.instructions = meal.instructions.replace(/\n/g, "<br>");
   return (
     <>
       <header className={classes.header}>
         <div className={classes.image}>
           {/* error */}
-          <Image src={meal.image} alt={meal.title} fill />
+          <Image src={meal.imagePath} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>

@@ -1,6 +1,6 @@
 import sql from "better-sqlite3";
 const db = sql("meals.db");
-import { MealItemProps } from "@/components/meals/meal-item";
+import { MealItemProps } from "@/app/type/meal-item";
 import slugify from "slugify";
 import xss from "xss";
 import fs from "node:fs";

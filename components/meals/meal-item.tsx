@@ -1,17 +1,7 @@
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import classes from "./meal-item.module.css";
-
-export type MealItemProps = {
-  title: string;
-  slug: string;
-  image: StaticImageData;
-  imagePath: string;
-  summary: string;
-  instructions: string;
-  creator: string;
-  creator_email: string;
-};
+import { MealItemProps } from "@/app/type/meal-item";
 
 export default function MealItem({
   title,
