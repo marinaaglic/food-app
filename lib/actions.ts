@@ -18,6 +18,7 @@ export async function shareMeal(
   const imagePath = `/images/${slug}.${(formData.get("image") as File).name
     .split(".")
     .pop()}`;
+
   const meal = {
     title: title,
     slug: slug,

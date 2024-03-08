@@ -7,16 +7,17 @@ type MealsDetailProps = {
   params: { mealSlug: string };
 };
 
-export async function generateMetaData({ params }: MealsDetailProps) {
-  const meal = getMeal(params.mealSlug);
-  if (!meal) {
-    notFound();
-  }
-  return {
-    title: meal.title,
-    description: meal.summary,
-  };
-}
+// export async function generateMetadata({ params }: MealsDetailProps) {
+//   const meal = getMeal(params.mealSlug);
+//   if (!meal) {
+//     notFound();
+//   }
+//   return {
+//     title: meal.title,
+//     description: meal.summary,
+//   };
+// }
+
 export default function MealsDetailPage({ params }: MealsDetailProps) {
   const meal = getMeal(params.mealSlug);
   if (!meal) {
@@ -27,6 +28,7 @@ export default function MealsDetailPage({ params }: MealsDetailProps) {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
+          {/* error */}
           <Image src={meal.image} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
