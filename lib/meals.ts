@@ -1,20 +1,10 @@
 import sql from "better-sqlite3";
 const db = sql("meals.db");
 import { MealItemProps } from "@/app/type/meal-item";
+import { Meal } from "@/app/type/meal";
 import slugify from "slugify";
 import xss from "xss";
 import fs from "node:fs";
-
-type Meal = {
-  title: string;
-  slug: string;
-  image: File;
-  imagePath: string;
-  summary: string;
-  instructions: string;
-  creator: string;
-  creator_email: string;
-};
 
 export async function getMeals(): Promise<MealItemProps[]> {
   await new Promise((resolve) => setTimeout(resolve, 2000));

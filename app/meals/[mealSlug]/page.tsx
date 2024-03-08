@@ -2,10 +2,7 @@ import classes from "./page.module.css";
 import Image, { StaticImageData } from "next/image";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
-
-type MealsDetailProps = {
-  params: { mealSlug: string };
-};
+import { MealsDetailProps } from "@/app/type/meal-item";
 
 // export async function generateMetadata({ params }: MealsDetailProps) {
 //   const meal = getMeal(params.mealSlug);

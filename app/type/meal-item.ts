@@ -10,3 +10,7 @@ export type MealItemProps = {
   creator: string;
   creator_email: string;
 };
+
+export type MealsDetailProps = {
+  params: { mealSlug: string };
+};

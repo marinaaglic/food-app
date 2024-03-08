@@ -2,11 +2,7 @@
 import { ChangeEvent, useRef, useState } from "react";
 import classes from "./image-picker.module.css";
 import Image from "next/image";
-
-type ImagePickerProps = {
-  label: string;
-  name: string;
-};
+import { ImagePickerProps } from "@/app/type/image-picker";
 
 export default function ImagePicker({ label, name }: ImagePickerProps) {
   const [pickedImage, setPickedImage] = useState<string | null>(null);
