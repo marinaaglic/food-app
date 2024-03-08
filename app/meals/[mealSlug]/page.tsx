@@ -1,5 +1,5 @@
 import classes from "./page.module.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
@@ -7,6 +7,16 @@ type MealsDetailProps = {
   params: { mealSlug: string };
 };
 
+export async function generateMetaData({ params }: MealsDetailProps) {
+  const meal = getMeal(params.mealSlug);
+  if (!meal) {
+    notFound();
+  }
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
 export default function MealsDetailPage({ params }: MealsDetailProps) {
   const meal = getMeal(params.mealSlug);
   if (!meal) {
@@ -17,7 +27,7 @@ export default function MealsDetailPage({ params }: MealsDetailProps) {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image src={meal.imagePath} alt={meal.title} fill />
+          <Image src={meal.image} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>
