@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is created with the purpose of learning Next.js, a popular React framework for building web applications.
+This project is created with the purpose of learning Next.js, a popular React framework for building web applications. The project uses an SQLite database for data storage and retrieval.
 
 ## Installation
 

@@ -15,18 +15,18 @@ import { MealsDetailProps } from "@/app/type/meal-item";
 //   };
 // }
 
-export default function MealsDetailPage({ params }: MealsDetailProps) {
+export default function MealDetailsPage({ params }: MealsDetailProps) {
   const meal = getMeal(params.mealSlug);
   if (!meal) {
     notFound();
   }
 
   meal.instructions = meal.instructions.replace(/\n/g, "<br>");
+
   return (
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          {/* error */}
           <Image src={meal.imagePath} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
